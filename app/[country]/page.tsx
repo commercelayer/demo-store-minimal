@@ -27,7 +27,7 @@ export default async function Page({ params }: PageProps) {
     <main className="min-h-screen bg-[#ededed] text-slate-900">
       <div className="mx-auto flex w-full max-w-7xl flex-col px-4 pb-14 pt-4 sm:px-6 lg:px-8">
         <StoreHeader />
-        <HeroBanner imageUrl={"https://res.cloudinary.com/commercelayer/image/upload/f_auto/v1658318039/demo-store/assets/all-over-print-backpack-white-front.jpg"} />
+        <HeroBanner imageUrl={"https://res.cloudinary.com/commercelayer/image/upload/f_auto/demo-store/assets/all-over-print-backpack-white-front.jpg"} />
         <ProductGrid items={skus} />
         <Footer
           countries={countries}
