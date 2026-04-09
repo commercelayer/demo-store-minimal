@@ -1,13 +1,13 @@
 export type Sku = {
-  code: string;
-  name: string;
-  description: string;
-  image_url: string;
-  amount_cents: number;
-  formatted_amount: string;
-  compare_at_amount_cents?: number;
-  formatted_compare_at_amount?: string;
-};
+  code: string
+  name: string
+  description: string
+  image_url: string
+  amount_cents: number
+  formatted_amount: string
+  compare_at_amount_cents?: number
+  formatted_compare_at_amount?: string
+}
 
 export const skus: Sku[] = [
   {
@@ -80,4 +80,4 @@ export const skus: Sku[] = [
     compare_at_amount_cents: 9900,
     formatted_compare_at_amount: "€99,00",
   },
-];
+]

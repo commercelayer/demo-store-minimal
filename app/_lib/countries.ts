@@ -1,8 +1,8 @@
 export type CountryConfig = {
-  name: string;
-  slug: string;
-  scope: string;
-};
+  name: string
+  slug: string
+  scope: string
+}
 
 export const countries: CountryConfig[] = [
   {
@@ -15,22 +15,22 @@ export const countries: CountryConfig[] = [
     slug: "eu",
     scope: "market:code:eu",
   },
-];
+]
 
 export function getCountryBySlug(slug: string): CountryConfig | undefined {
-  return countries.find((country) => country.slug === slug);
+  return countries.find((country) => country.slug === slug)
 }
 
 export function getCountryFromPath(pathname: string): CountryConfig | undefined {
-  const [slug] = pathname.split("/").filter(Boolean);
+  const [slug] = pathname.split("/").filter(Boolean)
 
   if (!slug) {
-    return undefined;
+    return undefined
   }
 
-  return getCountryBySlug(slug);
+  return getCountryBySlug(slug)
 }
 
 export function getScopeForPath(pathname: string): string | undefined {
-  return getCountryFromPath(pathname)?.scope;
+  return getCountryFromPath(pathname)?.scope
 }

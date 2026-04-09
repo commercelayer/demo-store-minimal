@@ -1,6 +1,6 @@
-import Link from "next/link";
+import Link from "next/link"
 
-import { countries } from "./_lib/countries";
+import { countries } from "./_lib/countries"
 
 export default function Page() {
   return (
@@ -28,5 +28,5 @@ export default function Page() {
         </section>
       </div>
     </main>
-  );
+  )
 }

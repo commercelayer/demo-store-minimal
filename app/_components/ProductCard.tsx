@@ -1,16 +1,16 @@
-import Image from "next/image";
+import Image from "next/image"
 
-import type { Sku } from "../_lib/skus";
+import type { Sku } from "../_lib/skus"
 
 type ProductCardProps = {
-  sku: Sku;
-};
+  sku: Sku
+}
 
 export function ProductCard({ sku }: ProductCardProps) {
   const hasDiscount =
     typeof sku.compare_at_amount_cents === "number" &&
     sku.compare_at_amount_cents > sku.amount_cents &&
-    Boolean(sku.formatted_compare_at_amount);
+    Boolean(sku.formatted_compare_at_amount)
 
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-[28px] border border-slate-200 bg-white">
@@ -52,5 +52,5 @@ export function ProductCard({ sku }: ProductCardProps) {
         </div>
       </div>
     </article>
-  );
+  )
 }

@@ -1,9 +1,9 @@
-import type { Sku } from "../_lib/skus";
-import { ProductCard } from "./ProductCard";
+import type { Sku } from "../_lib/skus"
+import { ProductCard } from "./ProductCard"
 
 type ProductGridProps = {
-  items: Sku[];
-};
+  items: Sku[]
+}
 
 export function ProductGrid({ items }: ProductGridProps) {
   return (
@@ -20,5 +20,5 @@ export function ProductGrid({ items }: ProductGridProps) {
         ))}
       </div>
     </section>
-  );
+  )
 }

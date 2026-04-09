@@ -1,8 +1,8 @@
-import Image from "next/image";
+import Image from "next/image"
 
 type HeroBannerProps = {
-  imageUrl: string;
-};
+  imageUrl: string
+}
 
 export function HeroBanner({ imageUrl }: HeroBannerProps) {
   return (
@@ -17,5 +17,5 @@ export function HeroBanner({ imageUrl }: HeroBannerProps) {
         />
       </div>
     </section>
-  );
+  )
 }

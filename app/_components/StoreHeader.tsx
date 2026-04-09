@@ -1,8 +1,6 @@
-import { CartIcon } from "./CartIcon";
-import { UserIcon } from "./UserIcon";
-
-// TODO: replace with real auth state
-const isLoggedIn = false;
+import { CartIcon } from "./CartIcon"
+import { CustomerLink } from './CustomerLink'
+import { UserIcon } from "./UserIcon"
 
 export function StoreHeader() {
   return (
@@ -15,31 +13,7 @@ export function StoreHeader() {
 
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-3">
-            {isLoggedIn ? (
-              <>
-                <a
-                  href="#"
-                  aria-label="My account"
-                  className="inline-flex items-center gap-2 text-sm text-slate-700 transition hover:text-slate-950"
-                >
-                  <UserIcon />
-                  <span className="sr-only">My account</span>
-                </a>
-                <a
-                  href="#"
-                  className="text-sm text-slate-700 transition hover:text-slate-950"
-                >
-                  Log out
-                </a>
-              </>
-            ) : (
-              <a
-                href="#"
-                className="text-sm text-indigo-600 transition hover:text-indigo-700"
-              >
-                Log in
-              </a>
-            )}
+            <CustomerLink />
           </div>
           <a
             href="#"
@@ -52,5 +26,5 @@ export function StoreHeader() {
         </div>
       </div>
     </header>
-  );
+  )
 }

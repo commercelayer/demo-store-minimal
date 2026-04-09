@@ -1,26 +1,26 @@
-import { notFound } from "next/navigation";
+import { notFound } from "next/navigation"
 
-import { Footer } from "../_components/Footer";
-import { HeroBanner } from "../_components/HeroBanner";
-import { ProductGrid } from "../_components/ProductGrid";
-import { StoreHeader } from "../_components/StoreHeader";
-import { countries, getCountryBySlug } from "../_lib/countries";
-import { skus } from "../_lib/skus";
+import { Footer } from "../_components/Footer"
+import { HeroBanner } from "../_components/HeroBanner"
+import { ProductGrid } from "../_components/ProductGrid"
+import { StoreHeader } from "../_components/StoreHeader"
+import { countries, getCountryBySlug } from "../_lib/countries"
+import { skus } from "../_lib/skus"
 
 type PageProps = {
-  params: Promise<{ country: string }>;
-};
+  params: Promise<{ country: string }>
+}
 
 export function generateStaticParams() {
-  return countries.map((country) => ({ country: country.slug }));
+  return countries.map((country) => ({ country: country.slug }))
 }
 
 export default async function Page({ params }: PageProps) {
-  const { country } = await params;
-  const currentCountry = getCountryBySlug(country);
+  const { country } = await params
+  const currentCountry = getCountryBySlug(country)
 
   if (!currentCountry) {
-    notFound();
+    notFound()
   }
 
   return (
@@ -35,5 +35,5 @@ export default async function Page({ params }: PageProps) {
         />
       </div>
     </main>
-  );
+  )
 }

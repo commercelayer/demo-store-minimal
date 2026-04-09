@@ -1,17 +1,17 @@
-import Link from "next/link";
+import Link from "next/link"
 
-import type { CountryConfig } from "../_lib/countries";
+import type { CountryConfig } from "../_lib/countries"
 
 type CountrySelectorFooterProps = {
-  countries: CountryConfig[];
-  currentSlug?: string;
-};
+  countries: CountryConfig[]
+  currentSlug?: string
+}
 
 export function Footer({
   countries,
   currentSlug,
 }: CountrySelectorFooterProps) {
-  const activeCountry = countries.find((country) => country.slug === currentSlug);
+  const activeCountry = countries.find((country) => country.slug === currentSlug)
 
   return (
     <footer className="mt-14 border-t border-slate-300/80 px-1 pt-5">
@@ -27,7 +27,7 @@ export function Footer({
 
         <nav aria-label="Country selector" className="flex flex-wrap items-center gap-4">
           {countries.map((country) => {
-            const isActive = country.slug === currentSlug;
+            const isActive = country.slug === currentSlug
 
             return (
               <Link
@@ -41,10 +41,10 @@ export function Footer({
               >
                 {country.name}
               </Link>
-            );
+            )
           })}
         </nav>
       </div>
     </footer>
-  );
+  )
 }
