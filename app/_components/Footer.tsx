@@ -45,6 +45,17 @@ export function Footer({
           })}
         </nav>
       </div>
+
+      <div className="mt-4 flex justify-start md:justify-end">
+        <a
+          href="https://github.com/commercelayer/demo-store-minimal"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-slate-600 transition hover:text-slate-950"
+        >
+          Explore this demo on GitHub
+        </a>
+      </div>
     </footer>
   )
 }
