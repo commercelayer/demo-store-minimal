@@ -1,4 +1,4 @@
-import { CartIcon } from "./CartIcon"
+import { Cart } from './Cart'
 import { CustomerLink } from './CustomerLink'
 
 export function StoreHeader() {
@@ -14,14 +14,7 @@ export function StoreHeader() {
           <div className="flex items-center gap-3">
             <CustomerLink />
           </div>
-          <a
-            href="#"
-            aria-label="Open cart"
-            className="inline-flex items-center gap-2 text-sm text-slate-800 transition hover:text-slate-950"
-          >
-            <CartIcon />
-            <span className="hidden sm:inline">Cart</span>
-          </a>
+          <Cart />
         </div>
       </div>
     </header>
