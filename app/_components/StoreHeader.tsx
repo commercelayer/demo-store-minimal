@@ -1,6 +1,5 @@
 import { CartIcon } from "./CartIcon"
 import { CustomerLink } from './CustomerLink'
-import { UserIcon } from "./UserIcon"
 
 export function StoreHeader() {
   return (
