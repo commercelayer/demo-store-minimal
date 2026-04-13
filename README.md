@@ -31,10 +31,34 @@ The **pull request from `cl` into `main` is intentionally kept open** — it's t
 ## Prerequisites
 
 - A [Commerce Layer](https://dashboard.commercelayer.io) account with at least one organization
-- Two markets configured and seeded — the demo uses market codes `us` and `eu` (see [`app/_lib/countries.ts`](app/_lib/countries.ts))
-- A Sales Channel application with the client ID to hand
+- A Sales Channel application with the client ID
+- Two markets configured and seeded — the demo uses market codes `US` and `EU` (see [`app/_lib/countries.ts`](app/_lib/countries.ts) from `cl` branch)
 
-> If you need demo data, use the [Commerce Layer Seeder](https://github.com/commercelayer/commercelayer-seeder) with the `multi_market` template.
+### Need demo data?
+
+- Run the command below in your terminal to install the CLI using your favorite package manager:
+
+  ```sh
+  npm install -g @commercelayer/cli
+  ```
+
+- Install the `seeder` plugin:
+
+  ```sh
+  cl plugins:install seeder
+  ```
+
+- Log in via the CLI using the [integration API credentials](https://docs.commercelayer.io/core/api-credentials#create-an-integration) like so:
+
+  ```sh
+  cl applications:login -o <organizationSlug> -i <clientId> -s <clientSecret> -a <applicationAlias>
+  ```
+
+- Seed your organization with some test data using the [seeder plugin](https://github.com/commercelayer/commercelayer-cli-plugin-seeder):
+
+  ```sh
+  cl seeder:seed -b multi_market
+  ```
 
 ## Getting started
 
