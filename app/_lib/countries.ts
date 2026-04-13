@@ -1,19 +1,16 @@
 export type CountryConfig = {
   name: string
   slug: string
-  scope: string
 }
 
 export const countries: CountryConfig[] = [
   {
     name: "United States",
     slug: "us",
-    scope: "market:code:us",
   },
   {
     name: "Europe",
     slug: "eu",
-    scope: "market:code:eu",
   },
 ]
 
@@ -29,8 +26,4 @@ export function getCountryFromPath(pathname: string): CountryConfig | undefined 
   }
 
   return getCountryBySlug(slug)
-}
-
-export function getScopeForPath(pathname: string): string | undefined {
-  return getCountryFromPath(pathname)?.scope
 }
