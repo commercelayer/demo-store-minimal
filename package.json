@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@commercelayer/js-auth": "^7.3.0",
+    "@commercelayer/react-components": "4.29.7",
     "next": "16.2.3",
     "react": "19.2.5",
     "react-dom": "19.2.5"
