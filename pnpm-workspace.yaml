@@ -1,2 +1,3 @@
 allowBuilds:
+  iframe-resizer: false
   sharp: true
